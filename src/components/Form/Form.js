@@ -50,7 +50,7 @@ const Form = () => {
         })
         .catch(function (error) {
           setLoading(false);
-          toast.error('Please enter a valid object', {
+          toast.error(`${error.response.data.message}`, {
             position: 'top-right',
             autoClose: 5000,
             hideProgressBar: false,
